@@ -84,7 +84,7 @@ with st.sidebar:
     st.caption("Data: Yahoo Finance + NewsAPI")
     st.caption("Not financial advice.")
 
-@st.cache_data(ttl=300)
+@st.cache_data(ttl=600)
 def load_data(ticker, period):
     info = get_stock_info(ticker)
     df   = get_historical_data(ticker, period)
